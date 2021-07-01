@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  nginx-nexusproxy:
+    image: nginx-nexusproxy
+    restart: always
+    ports:
+      - '443:443'
+      - '6000:6000'
+      - '5000:5000'
+    links:
+      - nexus-repo
+    command: [ nginx, '-g', 'daemon off;' ]
+
+  nexus-repo:
+    image: sonatype/nexus3
+    restart: always
+    volumes:
+      - "nexus-data:/nexus-data"
+
+volumes:
+  nexus-data:
