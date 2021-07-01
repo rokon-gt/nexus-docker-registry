@@ -1,8 +1,14 @@
-# nginx-nexus-docker
-## Code in this repository represents Nexus3 with Nginx reverse-proxy using SSL/TLS and docker.
-What we will achieve here?
-1. Nexus3 repository. 
-2. Nginx Reverse-Proxy to Nexus3 repo.
-3. SSL/TLS certs(root and nexus) generated and implemented.
-4. Docker proxy registry w/ Nexus3.
-5. Docker hosted registry w/ Nexus3.
+# Nexus Docker Private Registry Behind NGINX Reverse Proxy
+
+## Docker and Docker Compose Install
+
+__Pre-Requisite__
+* Docker
+* Docker Compose
+
+__Docker & Docker Compose Install__
+$ apt-get install docker-ce -y
+$ curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ chmod +x /usr/local/bin/docker-compose
+$ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+$ docker-compose --version
