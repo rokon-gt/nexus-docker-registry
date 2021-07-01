@@ -20,3 +20,5 @@ __Clone This Repo and Run Script__
 * root@registry:~# cd ../scripts/
 * root@registry:~# sh nexus-nginxproxy.sh
 * root@registry:~# docker ps
+
+#### Ref: https://www.youtube.com/watch?v=PRJz61Jm6Ec
